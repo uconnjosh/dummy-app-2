@@ -1,0 +1,62 @@
+<style>input { border: 1px solid green }</style>
+<style>input[spellcheck="true"] { border: 1px solid red }</style>
+<p>Curly brace input with boolean false</p>
+
+{{input value="http://www.facebook.com" spellcheck=false}}
+
+
+<p>Curly brace input with string false</p>
+
+{{input value="http://www.facebook.com" spellcheck="false"}}
+
+
+<p>Angle bracket input with boolean false, without @</p>
+
+<Input value="http://www.facebook.com" spellcheck={{false}} />
+
+
+<p>Angle bracket input with boolean false, with @</p>
+
+<Input value="http://www.facebook.com" @spellcheck={{false}} />
+
+
+<p>Angle bracket input with string false, without @</p>
+
+<Input value="http://www.facebook.com" spellcheck="false" />
+
+
+<p>Angle bracket input with string false, with @</p>
+
+<Input value="http://www.facebook.com" @spellcheck="false" />
+
+
+<p>HTML input with string false</p>
+
+<input value="http://www.facebook.com" spellcheck="false" />
+
+
+<p>HTML input with string false and "on" binding call</p>
+
+<input value="http://www.facebook.com"
+  spellcheck="false"
+  {{on "input" @onInput}}
+  />
+
+<p>HTML input with string false and "did-insert" binding call</p>
+
+<input value="http://www.facebook.com"
+  spellcheck="false"
+  {{did-insert this.focusInput}}
+  />
+
+
+<p>PowerSelect input with search</p>
+<PowerSelect
+  @options={{this.countries}}
+  @searchEnabled={{true}}
+  @spellcheck={{false}}
+  @onChange={{action "foo"}} as |name|
+>
+  {{name.name}}
+</PowerSelect
+>
