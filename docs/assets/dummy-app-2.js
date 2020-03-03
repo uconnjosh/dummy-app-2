@@ -998,7 +998,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("dummy-app-2/app")["default"].create({"name":"dummy-app-2","version":"0.0.0+c22f8522"});
+            require("dummy-app-2/app")["default"].create({"name":"dummy-app-2","version":"0.0.0+aa2b341b"});
           }
         
 //# sourceMappingURL=dummy-app-2.map
