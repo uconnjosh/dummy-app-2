@@ -90,6 +90,10 @@ define("dummy-app-2/tests/lint/app.lint-test", [], function () {
     assert.expect(1);
     assert.ok(true, 'router.js should pass ESLint\n\n');
   });
+  QUnit.test('routes/demo.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/demo.js should pass ESLint\n\n');
+  });
 });
 define("dummy-app-2/tests/lint/templates.template.lint-test", [], function () {
   "use strict";
@@ -102,6 +106,10 @@ define("dummy-app-2/tests/lint/templates.template.lint-test", [], function () {
   QUnit.test('dummy-app-2/templates/components/dummy.hbs', function (assert) {
     assert.expect(1);
     assert.ok(false, 'dummy-app-2/templates/components/dummy.hbs should pass TemplateLint.\n\ndummy-app-2/templates/components/dummy.hbs\n  62:1  error  Incorrect indentation for `PowerSelect` beginning at L54:C0. Expected `</PowerSelect>` ending at L62:C1 to be at an indentation of 0 but was found at -13.  block-indentation\n  35:0  error  Self-closing a void element is redundant  self-closing-void-elements\n  40:0  error  Self-closing a void element is redundant  self-closing-void-elements\n  47:0  error  Self-closing a void element is redundant  self-closing-void-elements\n');
+  });
+  QUnit.test('dummy-app-2/templates/demo.hbs', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'dummy-app-2/templates/demo.hbs should pass TemplateLint.\n\n');
   });
 });
 define("dummy-app-2/tests/lint/tests.lint-test", [], function () {
@@ -116,12 +124,27 @@ define("dummy-app-2/tests/lint/tests.lint-test", [], function () {
     assert.expect(1);
     assert.ok(true, 'test-helper.js should pass ESLint\n\n');
   });
+  QUnit.test('unit/routes/demo-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/demo-test.js should pass ESLint\n\n');
+  });
 });
 define("dummy-app-2/tests/test-helper", ["dummy-app-2/app", "dummy-app-2/config/environment", "@ember/test-helpers", "ember-qunit"], function (_app, _environment, _testHelpers, _emberQunit) {
   "use strict";
 
   (0, _testHelpers.setApplication)(_app.default.create(_environment.default.APP));
   (0, _emberQunit.start)();
+});
+define("dummy-app-2/tests/unit/routes/demo-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Route | demo', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:demo');
+      assert.ok(route);
+    });
+  });
 });
 define('dummy-app-2/config/environment', [], function() {
   var prefix = 'dummy-app-2';

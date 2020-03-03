@@ -896,8 +896,24 @@
     location: _environment.default.locationType,
     rootURL: _environment.default.rootURL
   });
-  Router.map(function () {});
+  Router.map(function () {
+    this.route('demo', {
+      path: '/'
+    });
+  });
   var _default = Router;
+  _exports.default = _default;
+});
+;define("dummy-app-2/routes/demo", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.Route.extend({});
+
   _exports.default = _default;
 });
 ;define("dummy-app-2/services/ajax", ["exports", "ember-ajax/services/ajax"], function (_exports, _ajax) {
@@ -935,8 +951,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "MGUF9Lqo",
-    "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[5,\"dummy\",[],[[],[]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"hasEval\":false}",
+    "id": "h/NqBom1",
+    "block": "{\"symbols\":[],\"statements\":[[1,[22,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "dummy-app-2/templates/application.hbs"
     }
@@ -957,6 +973,24 @@
     "block": "{\"symbols\":[\"name\",\"@onInput\"],\"statements\":[[7,\"style\",true],[8],[0,\"input { border: 1px solid green }\"],[9],[0,\"\\n\"],[7,\"style\",true],[8],[0,\"input[spellcheck=\\\"true\\\"] { border: 1px solid red }\"],[9],[0,\"\\n\"],[7,\"p\",true],[8],[0,\"Curly brace input with boolean false\"],[9],[0,\"\\n\\n\"],[1,[28,\"input\",null,[[\"value\",\"spellcheck\"],[\"http://www.facebook.com\",false]]],false],[0,\"\\n\\n\\n\"],[7,\"p\",true],[8],[0,\"Curly brace input with string false\"],[9],[0,\"\\n\\n\"],[1,[28,\"input\",null,[[\"value\",\"spellcheck\"],[\"http://www.facebook.com\",\"false\"]]],false],[0,\"\\n\\n\\n\"],[7,\"p\",true],[8],[0,\"Angle bracket input with boolean false, without @\"],[9],[0,\"\\n\\n\"],[5,\"input\",[[12,\"value\",\"http://www.facebook.com\"],[12,\"spellcheck\",false]],[[],[]]],[0,\"\\n\\n\\n\"],[7,\"p\",true],[8],[0,\"Angle bracket input with boolean false, with @\"],[9],[0,\"\\n\\n\"],[5,\"input\",[[12,\"value\",\"http://www.facebook.com\"]],[[\"@spellcheck\"],[false]]],[0,\"\\n\\n\\n\"],[7,\"p\",true],[8],[0,\"Angle bracket input with string false, without @\"],[9],[0,\"\\n\\n\"],[5,\"input\",[[12,\"value\",\"http://www.facebook.com\"],[12,\"spellcheck\",\"false\"]],[[],[]]],[0,\"\\n\\n\\n\"],[7,\"p\",true],[8],[0,\"Angle bracket input with string false, with @\"],[9],[0,\"\\n\\n\"],[5,\"input\",[[12,\"value\",\"http://www.facebook.com\"]],[[\"@spellcheck\"],[\"false\"]]],[0,\"\\n\\n\\n\"],[7,\"p\",true],[8],[0,\"HTML input with string false\"],[9],[0,\"\\n\\n\"],[7,\"input\",true],[10,\"value\",\"http://www.facebook.com\"],[10,\"spellcheck\",\"false\"],[8],[9],[0,\"\\n\\n\\n\"],[7,\"p\",true],[8],[0,\"HTML input with string false and \\\"on\\\" binding call\"],[9],[0,\"\\n\\n\"],[7,\"input\",false],[12,\"value\",\"http://www.facebook.com\"],[12,\"spellcheck\",\"false\"],[3,\"on\",[\"input\",[23,2,[]]]],[8],[9],[0,\"\\n\\n\"],[7,\"p\",true],[8],[0,\"HTML input with string false and \\\"did-insert\\\" binding call\"],[9],[0,\"\\n\\n\"],[7,\"input\",false],[12,\"value\",\"http://www.facebook.com\"],[12,\"spellcheck\",\"false\"],[3,\"did-insert\",[[23,0,[\"focusInput\"]]]],[8],[9],[0,\"\\n\\n\\n\"],[7,\"p\",true],[8],[0,\"PowerSelect input with search\"],[9],[0,\"\\n\"],[5,\"power-select\",[],[[\"@options\",\"@searchEnabled\",\"@spellcheck\",\"@onChange\"],[[23,0,[\"countries\"]],true,false,[28,\"action\",[[23,0,[]],\"foo\"],null]]],{\"statements\":[[0,\"\\n  \"],[1,[23,1,[\"name\"]],false],[0,\"\\n\"]],\"parameters\":[1]}],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "dummy-app-2/templates/components/dummy.hbs"
+    }
+  });
+
+  _exports.default = _default;
+});
+;define("dummy-app-2/templates/demo", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.HTMLBars.template({
+    "id": "8g3OvC23",
+    "block": "{\"symbols\":[],\"statements\":[[5,\"dummy\",[],[[],[]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"hasEval\":false}",
+    "meta": {
+      "moduleName": "dummy-app-2/templates/demo.hbs"
     }
   });
 
@@ -998,7 +1032,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("dummy-app-2/app")["default"].create({"name":"dummy-app-2","version":"0.0.0+aa2b341b"});
+            require("dummy-app-2/app")["default"].create({"name":"dummy-app-2","version":"0.0.0+eec71fe0"});
           }
         
 //# sourceMappingURL=dummy-app-2.map
